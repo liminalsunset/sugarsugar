@@ -1,14 +1,20 @@
 import './App.css';
-import SugarConverter from './SugarConverter';
 import TspsSugar from './TspsSugar';
 import TspPerDay from './TspPerDay';
+import DaysToYear from './DaysToYear';
 
 function App() {
   return (
     <div className="App">
-    <SugarConverter />
-    <TspsSugar />
-    <TspPerDay />
+      <header className="header">Sugar Calculators</header>
+        <div className="calculators">
+          <TspsSugar />
+          <TspPerDay />
+          <DaysToYear />
+        </div>
+        <a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sugar/added-sugars" class="link">
+          AHA Regarding Added Sugars (new tab)
+        </a>
     </div>
   );
 }

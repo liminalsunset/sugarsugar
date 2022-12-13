@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Calculate.css';
 
 function SugarConverter() {
   const [sugarPer16Oz, setSugarPer16Oz] = useState(0);
@@ -9,18 +10,17 @@ function SugarConverter() {
   }
 
   function handleSubmit(event) {
-    // Calculate the sugar per 24 fluid ounces
     const sugarPer20Oz = (sugarPer16Oz * 20) / 16;
     setSugarPer20Oz(sugarPer20Oz);
   }
 
   return (
-    <div>
+    <div className="smallprint">
       <label>
         Grams of sugar per 16 fluid ounces:
         <input type="number" onChange={handleChange} />
       </label>
-      <button onClick={handleSubmit}>Submit</button>
+      <button onClick={handleSubmit}>Calculate</button>
       <p>Grams of sugar per 20 fluid ounces: {sugarPer20Oz}</p>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Calculate.css';
 
 function TspsSugar() {
     const [sugarGrams, setSugarGrams] = useState(0);
@@ -15,7 +16,7 @@ function TspsSugar() {
 
 
     return (
-        <div>
+        <div className="smallprint">
             <label>
                 Grams of sugar:
                 <input type="number" onChange={handleChange} />
