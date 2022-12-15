@@ -2,7 +2,7 @@ import './App.css';
 import TspsSugar from './TspsSugar';
 import TspPerDay from './TspPerDay';
 import DaysToYear from './DaysToYear';
-import NameGenerator from './NameGenerator';
+import AddedSugarLogger from './AddedSugarLogger';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           AHA Regarding Added Sugars (new tab)
         </a>
         <div>
-          <NameGenerator />
+          <AddedSugarLogger /> 
         </div>
     </div>
   );

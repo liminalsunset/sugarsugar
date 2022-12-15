@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SugarCounterWithDelete = () => {
+const SugarCounterWithDeleteOld = () => {
   // Declare a new state variable, which we'll call "sugar"
   const [sugar, setSugar] = useState(0);
 
@@ -55,4 +55,4 @@ const SugarCounterWithDelete = () => {
   );
 }
 
-export default SugarCounterWithDelete;
+export default SugarCounterWithDeleteOld;
