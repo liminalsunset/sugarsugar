@@ -1,28 +1,38 @@
 import React, { useState } from 'react';
 
-function AddedSugarLogger() {
+function CalorieTracker() {
   // Use the useState hook to initialize the state of the input field
   // and a method to update the state when the user enters a value
-  const [addedSugar, setAddedSugar] = useState(0);
+  const [calories, setCalories] = useState(0);
+  const [caloriesToday, setCaloriesToday] = useState(0);
 
   // This function will be called whenever the user enters a value in the input field
   const handleChange = (event) => {
     // Update the state with the value entered by the user
-    setAddedSugar(event.target.value);
+    setCalories(event.target.value);
   };
+
+  function handleSubmit() {
+    const caloriesToday = (setCalories) + (calories);
+    setCaloriesToday(caloriesToday);
+  };
+
 
   return (
     <div>
       <label>
-        Enter the number of grams of added sugar you've eaten today:
+        Enter the number of calories you've eaten today:
         <input
           type="number"
-          value={addedSugar}
+          value={calories}
           onChange={handleChange}
         />
       </label>
+      <button onClick={handleSubmit}>Add</button>
+      <p>You have eaten {calories} calories today.</p>
     </div>
   );
 }
 
-export default AddedSugarLogger;
+
+export default CalorieTracker;

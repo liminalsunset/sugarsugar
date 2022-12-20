@@ -2,7 +2,9 @@ import './App.css';
 import TspsSugar from './TspsSugar';
 import TspPerDay from './TspPerDay';
 import DaysToYear from './DaysToYear';
-import AddedSugarLogger from './AddedSugarLogger';
+import CalorieTracker from './CalorieTracker';
+import TextTransformer from './ScriptureMemory';
+
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
           AHA Regarding Added Sugars (new tab)
         </a>
         <div>
-          <AddedSugarLogger /> 
+          <CalorieTracker />
+        </div>
+        <div>
+          <TextTransformer />
         </div>
     </div>
   );
