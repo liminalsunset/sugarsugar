@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import TextTransformer from './ScriptureMemory';
 
-function TextTransformer() {
-  // Use the useState hook to store the input text
+function ScriptureStudy() {
+  // Use the useState hook to store the original input text
   const [inputText, setInputText] = useState('');
 
   // Use the useState hook to store the transformed text
   const [transformedText, setTransformedText] = useState([]);
+
+  // Use the useState hook to store a flag indicating whether to display the original input text or the transformed text
+  const [showInput, setShowInput] = useState(false);
 
   // Define a function to handle the form submission
   const handleSubmit = e => {
@@ -36,18 +40,25 @@ function TextTransformer() {
     setTransformedText(transformedWords);
   };
 
+  // Define a function to toggle the display of the original input text and the transformed text
+  const toggleShowInput = () => {
+    setShowInput(!showInput);
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-        <div>
-            <textarea value={inputText} onChange={e => setInputText(e.target.value)} />
-            <button type="submit">Transform</button>
-        </div>
-        <p>
-      {transformedText}
-      </p>
+      <textarea value={inputText} onChange={e => setInputText(e.target.value)} />
+      <button type="submit">Transform</button>
+      {/* Use the TextTransformer component to display the transformed text */}
+      <TextTransformer transformedText={transformedText} onClick={toggleShowInput} />
+      {/* Use the showInput flag to conditionally render the original input text or the transformed text */}
+      {showInput ? (
+        <p>{inputText}</p>
+      ) : (
+        transformedText
+      )}
     </form>
   );
 }
 
-
-export default TextTransformer;
+export default ScriptureStudy;
