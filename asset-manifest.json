@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sugarsugar/static/css/main.ed57ae3c.css",
+    "main.js": "/sugarsugar/static/js/main.9ab013da.js",
+    "static/js/787.81101846.chunk.js": "/sugarsugar/static/js/787.81101846.chunk.js",
+    "index.html": "/sugarsugar/index.html",
+    "main.ed57ae3c.css.map": "/sugarsugar/static/css/main.ed57ae3c.css.map",
+    "main.9ab013da.js.map": "/sugarsugar/static/js/main.9ab013da.js.map",
+    "787.81101846.chunk.js.map": "/sugarsugar/static/js/787.81101846.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed57ae3c.css",
+    "static/js/main.9ab013da.js"
+  ]
+}
